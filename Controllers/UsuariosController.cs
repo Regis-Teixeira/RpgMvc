@@ -35,7 +35,7 @@ namespace RpgMvc.Controllers
                 if (response.StatusCode == System.Net.HttpStatusCode.OK)
                 {
                     TempData["Mensagem"] =
-                        string.Format($"Usuário{u.Username} registrado com sucesso! Faça o login para acessar.");
+                        string.Format($"Usuário {u.Username} registrado com sucesso! Faça o login para acessar.");
                     return View("AutenticarUsuario");
                 }
                 else
@@ -47,6 +47,44 @@ namespace RpgMvc.Controllers
             {
                 TempData["MensagemErro"] = ex.Message;
                 return RedirectToAction("Index");
+            }
+        }
+
+        [HttpGet]
+        public ActionResult IndexLogin()
+        {
+            return View("AutenticarUsuario");
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> AutenticarAsync(UsuarioViewModel u)
+        {
+            try
+            {
+                HttpClient httpClient = new HttpClient();
+                string uriComplementar = "Autenticar";
+
+                var content = new StringContent(JsonConvert.SerializeObject(u));
+                content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+                HttpResponseMessage response = await httpClient.PostAsync(uriBase + uriComplementar, content);
+
+                string serialized = await response.Content.ReadAsStringAsync();
+
+                if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                {
+                    HttpContext.Session.SetString("SessionTokenUsuario", serialized);
+                    TempData["Mensagem"] = string.Format($"Bem-vindo {u.Username}!!!");
+                    return RedirectToAction("Index", "Personagens");
+                }
+                else
+                {
+                    throw new System.Exception(serialized);
+                }
+            }
+            catch (System.Exception ex)
+            {
+                TempData["MensagemErro"] = ex.Message;
+                return IndexLogin();
             }
         }
     }

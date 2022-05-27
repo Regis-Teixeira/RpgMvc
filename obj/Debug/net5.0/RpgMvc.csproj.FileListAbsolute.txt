@@ -43,3 +43,5 @@ D:\Régis\RpgMvc\bin\Debug\net5.0\Newtonsoft.Json.dll
 D:\Régis\RpgMvc\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
 D:\Régis\RpgMvc\obj\Debug\net5.0\Razor\Views\Shared\_LoginPartialRpg.cshtml.g.cs
 D:\Régis\RpgMvc\obj\Debug\net5.0\Razor\Views\Usuarios\CadastrarUsuario.cshtml.g.cs
+D:\Régis\RpgMvc\obj\Debug\net5.0\Razor\Views\Usuarios\AutenticarUsuario.cshtml.g.cs
+D:\Régis\RpgMvc\obj\Debug\net5.0\Razor\Views\Personagens\index.cshtml.g.cs
