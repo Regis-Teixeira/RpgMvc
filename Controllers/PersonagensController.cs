@@ -11,7 +11,7 @@ namespace RpgMvc.Controllers
 {
     public class PersonagensController : Controller
     {
-        public string uriBase = "http://localhost:5000/Usuarios/Personagens/";
+        public string uriBase = "http://localhost:5000/Personagens/";
     
         [HttpGet]
         public async Task<ActionResult> IndexAsync()
@@ -123,6 +123,33 @@ namespace RpgMvc.Controllers
                         PersonagemViewModel p = await Task.Run(() =>
                         JsonConvert.DeserializeObject<PersonagemViewModel>(serialized));
                         return View(p);
+                    }
+                    else
+                        throw new System.Exception(serialized);
+                }
+                catch (System.Exception ex)
+                {
+                    TempData["MensagemErro"] = ex.Message;
+                    return RedirectToAction("Index");
+                }
+            }
+
+            [HttpGet]
+            public async Task<ActionResult> DeleteAsync (int id)
+            {
+                try
+                {
+                    HttpClient httpClient = new HttpClient();
+                    string token = HttpContext.Session.GetString("SessionTokenUsuario");
+                    httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+                    HttpResponseMessage response = await httpClient.DeleteAsync(uriBase + id.ToString());
+                    string serialized = await response.Content.ReadAsStringAsync();
+
+                    if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                    {
+                        TempData["Mensagem"] = string.Format($"PersonagemId {id} removido com sucesso!");
+                        return RedirectToAction("Index");
                     }
                     else
                         throw new System.Exception(serialized);

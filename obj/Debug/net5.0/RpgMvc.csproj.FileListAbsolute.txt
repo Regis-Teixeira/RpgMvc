@@ -74,7 +74,6 @@ C:\Users\REC4\RpgMvc\obj\Debug\net5.0\scopedcss\bundle\RpgMvc.styles.css
 C:\Users\REC4\RpgMvc\obj\Debug\net5.0\RpgMvc.TagHelpers.input.cache
 C:\Users\REC4\RpgMvc\obj\Debug\net5.0\RpgMvc.TagHelpers.output.cache
 C:\Users\REC4\RpgMvc\obj\Debug\net5.0\RpgMvc.RazorCoreGenerate.cache
-C:\Users\REC4\RpgMvc\obj\Debug\net5.0\Razor\Views\Create.cshtml.g.cs
 C:\Users\REC4\RpgMvc\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\REC4\RpgMvc\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\REC4\RpgMvc\obj\Debug\net5.0\Razor\Views\Personagens\index.cshtml.g.cs
@@ -95,3 +94,5 @@ C:\Users\REC4\RpgMvc\obj\Debug\net5.0\ref\RpgMvc.dll
 C:\Users\REC4\RpgMvc\obj\Debug\net5.0\RpgMvc.pdb
 C:\Users\REC4\RpgMvc\obj\Debug\net5.0\RpgMvc.genruntimeconfig.cache
 C:\Users\REC4\RpgMvc\obj\Debug\net5.0\Razor\Views\Personagens\Details.cshtml.g.cs
+C:\Users\REC4\RpgMvc\obj\Debug\net5.0\Razor\Views\Personagens\Create.cshtml.g.cs
+C:\Users\REC4\RpgMvc\obj\Debug\net5.0\Razor\Views\Personagens\Edit.cshtml.g.cs
