@@ -96,3 +96,8 @@ C:\Users\REC4\RpgMvc\obj\Debug\net5.0\RpgMvc.genruntimeconfig.cache
 C:\Users\REC4\RpgMvc\obj\Debug\net5.0\Razor\Views\Personagens\Details.cshtml.g.cs
 C:\Users\REC4\RpgMvc\obj\Debug\net5.0\Razor\Views\Personagens\Create.cshtml.g.cs
 C:\Users\REC4\RpgMvc\obj\Debug\net5.0\Razor\Views\Personagens\Edit.cshtml.g.cs
+D:\Régis\RpgMvc\obj\Debug\net5.0\Razor\Views\Personagens\Create.cshtml.g.cs
+D:\Régis\RpgMvc\obj\Debug\net5.0\Razor\Views\Personagens\Details.cshtml.g.cs
+D:\Régis\RpgMvc\obj\Debug\net5.0\Razor\Views\Personagens\Edit.cshtml.g.cs
+D:\Régis\RpgMvc\bin\Debug\net5.0\RpgMvc.StaticWebAssets.xml
+D:\Régis\RpgMvc\obj\Debug\net5.0\Razor\Views\Disputas\index.cshtml.g.cs
